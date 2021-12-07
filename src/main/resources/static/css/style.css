@@ -1,0 +1,219 @@
+.bg-primary{
+	background: #fff !important;
+}
+
+body {
+	color :#6c757d;
+}
+
+.banner{
+	width:100%;
+	height:93vh;
+/* 	background:black;
+	color:white; */
+}
+.banner-inner{
+		padding:20px
+
+}
+
+.my-card{
+	padding: 20px;
+	background: #FFFFFF;
+}
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 360px;
+  border: 1px solid #9C9C9C;
+  background-color: white;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+
+/* sidebar style */
+
+
+.sidebar{
+    width: 200px;
+    background: #37404a;
+    height: 100vh;
+    font-weight: 300;
+    font-size: 0.9em;
+    color: #8391a2;
+	padding-top:15px;
+	float:left;
+}
+
+.sidebar a{
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: gray;
+}
+
+.sidebar a:hover{
+	background: #e2e2e2;
+	
+}
+
+.sidebar .divider{
+	height: .5px;
+	width: 100%;
+	background: #e2e2e2;
+	margin-top: 10px;
+}
+
+.content{
+	margin:20px 30px 0 30px; 
+	width:100%;
+}
+
+.sidebar .crossBtn{
+	position: absolute;
+	top: 0;
+	right: 35px;
+	font-size: 36px;
+	cursor: pointer;
+}
+
+
+
+.main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+
+.main-wrapper{
+  width: 400px;
+  height: 500px;
+}
+
+.align-middle{
+  align-items: center;
+}
+
+/* login */
+
+.login-cover{
+	background: url('../images/journel.jpeg');
+  height: 170px;
+      background-size: cover;
+
+}
+
+.login-content{
+  padding: 20px 25px 0 25px;
+}
+
+.login-header{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.login-input{
+  margin-top: 30px;
+}
+
+.login-input input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.login-submit input,button	{
+  width: 100%;
+  height: 35px;
+  background-color: #2196F3;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.login-submit button:hover{
+  background-color: #fff;
+  border: 1px solid black;
+  color: black;
+}
+
+.register{
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.register-color{
+  color: #2196F3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Home */
+
+.home-main{
+  padding: 0 40px;
+}
+
+.home-wrapper{
+  display: flex;
+}
+
+/* Side Nav */
+.side-nav{
+  width: 300px;
+}
+
+.side-nav li{
+  text-decoration: none;
+  list-style: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.dashboard{
+	color :#6c757d;
+	font-size: 20px;
+}
+
+.dashboard-header{
+padding-top: 10px;;
+}
+
+.home-main{
+	display:flex;
+	padding:0;
+}
+
+
+.edit-button{
+	width:80px;
+}
+
+.delete-button{
+	margin-right:5px;
+	width:80px;
+	height:35px;
+}
+
+td,th{
+	    line-height: 50px;
+}
+
+.submit-button{
+	margin-top: 20px;
+}
+
+
+.info-card{
+	width:400px;
+}
+

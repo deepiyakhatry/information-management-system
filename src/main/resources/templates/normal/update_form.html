@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>this is home page</title>
+</head>
+<body>
+	<section>
+				<h3 class="text-center">EDIT DETAILS</h3>
+				
+				<div class="mt-1">
+				
+				<div class="d-flex justify-content-center">
+					
+					<div class="info-card">
+					
+						<form 	action="#" 
+								th:object="${contact}"
+								enctype="multipart/form-data"
+								method="POST"
+								th:action="@{/user/process-update}"
+								class="mt-2"
+						>
+						
+						<input type="hidden" th:value="${contact.cId}" name="cId" />
+						
+						<!-- First Name -->
+						<div class="input-group">
+							<input th:value="${contact.firstName}" type="text" id="firstName" name="firstName" placeholder="First Name" class="form-control" required/>
+						</div>	
+						
+						<!-- Last Name -->	
+						<div class="input-group mt-3">
+							<input th:value="${contact.lastName}" type="text" id="lastName" name="lastName" placeholder="Last Name" class="form-control" required />
+						</div>
+						
+						<!-- Email Field-->
+						<div class="input-group mt-3">
+							<input th:value="${contact.email}" type="email" id="email" name="email" placeholder="Email" class="form-control" required/>
+						</div>
+							
+						<!-- Department -->
+						<div class="input-group mt-3">
+							<input th:value="${contact.department}" type="text" id="department" name="department" placeholder="Work Department" class="form-control" required/>
+						</div>	
+							
+						<!-- Job Title Field -->
+						<div class="input-group mt-3">
+							<input th:value="${contact.jobTitle}" type="text" id="jobTitle" name="jobTitle" placeholder="Job Title" class="form-control" required/>
+						</div>
+							
+					<div class="col-md-4 mt-3">
+						
+					    <select class="form-select info-card" id="prefecture" name="prefecture" >
+					      <option  value="">Select the prefecture</option>
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					    </select>
+					  </div>
+												
+						<div class="container text-center submit-button">
+							<button class="btn btn-outline-primary">SUBMIT</button>	
+						</div>		
+						
+						
+						</form>	
+						
+					</div>
+					
+				</div>
+					
+				</div>
+	</section>
+	
+</body>
+</html>

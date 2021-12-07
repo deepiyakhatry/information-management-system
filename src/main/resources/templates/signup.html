@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>this is home page</title>
+</head>
+<body>
+	<section>
+<!--		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+				<div class="my-card mt-3">-->	
+		<div class="main">
+        <div class="main-wrapper align-middle">
+          <div class="login-cover">
+          </div>
+          <div class="login-content">
+            <div class="login-header">
+              SIGN UP 
+            </div>
+				  	<div th:if="${session.message}" th:classappend="${session.message.type}" class="alert" role="alert">
+ 		 				<p class="text-center" th:text="${session.message.content}"></p>
+ 		 				<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+					</div>
+<!--					<h1 class="text-center">Register Here !!!</h1>
+-->					<form class="login-input" action="" th:action="@{/do_register}" method="post" th:object="${user}">
+						
+						<!-- name field -->
+						    <input name="name" type="text" class="form-control" id="name_field" aria-describedby="emailHelp" placeholder="Username" required th:value="${user.name}">
+  							
+						<!-- email field -->
+						    <input name="email" type="email" class="form-control" id="email_field" aria-describedby="emailHelp" placeholder="Email" required th:value="${user.email}">
+
+						<!-- password field -->
+						    <input name="password" type="password" class="form-control" id="password_field" aria-describedby="emailHelp" placeholder="Password" required>
+  						
+  						<div class="login-submit">
+  							<button type="submit">
+  								Submit
+  							</button>
+ <span class="register">Already a member? <span className="register-color"><a
+                                            th:href="@{/signin}" class="text-warning">Login here</a></span></span>
+  						</div>
+  						
+  	
+  					
+  						
+					</form >
+				</div>
+					
+				</div>
+			</div>
+
+	</section>
+	
+</body>
+</html>

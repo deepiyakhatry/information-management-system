@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>this is home page</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<body>
+	<section>
+		<div class="show-info">
+			  	 <table class="table table-dark table-striped">
+				  <thead class="thead-dark">
+				    <tr>
+				      <th scope="col">No.</th>
+				      <th scope="col">First Name</th>
+				      <th scope="col">Last Name</th>
+				      <th scope="col">Email</th>
+				      <th scope="col">Department</th>
+				      <th scope="col">Job Title</th>
+				      <th scope="col">Prefecture</th>
+				      <th scope="col">Action</th>
+				    </tr>
+				  </thead >
+					  <tbody>
+					    <tr th:each="c : ${contacts}">
+					      <th scope="row">1</th>
+					      <td th:text="${c.firstName}">Mark</td>
+					      <td th:text="${c.lastName}">Otto</td>
+					      <td th:text="${c.email}">@mdo</td>
+					      <td th:text="${c.department}">Mark</td>
+					      <td th:text="${c.jobTitle}">Otto</td>
+					      <td th:text="${c.prefecture}">@mdo</td>
+					      <td>
+					      	
+					      	<form method="post" th:action="@{'/user/update-contact/'+${c.cId}}" class="mt-2 d-flex">
+					      							      	<a href="#" th:onclick="|deleteContact(${c.cId})|" class="btn btn-danger btn-sm delete-button">Delete</a> <br>
+
+					      		<button type="submit" class="btn btn-primary btn-sm edit-button">Edit</button>
+					      	</form>
+					      	
+					      </td>
+					    </tr>
+					  </tbody>
+				</table>
+			  	 
+			</div>
+			
+		</div>
+	</section>
+	
+</body>
+</html>
